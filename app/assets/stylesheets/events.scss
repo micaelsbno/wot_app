@@ -3,6 +3,11 @@
   font-family: 'Roboto', 'sans-serif'
 }
 
+body {
+  background-color: black;
+  color: white;
+}
+
 .map-image {
   height: 20em;
   width: 100%;
@@ -34,7 +39,7 @@
 .event__image {
   background-size: cover;
   background-position: center;
-  height: 250px;
+  height: 20em;
   width: 100%;
 }
 

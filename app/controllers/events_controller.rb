@@ -17,7 +17,6 @@ class EventsController < ApplicationController
     @event = Event.find_by(id: params[:id])
     @time = @event.event_times
     @place = @event.place
-    binding.pry
     render :show
   end
 
