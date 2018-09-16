@@ -1,3 +1,7 @@
+const icon = {
+
+}
+
 function updateMap(map, center){
     fetch('/update_events/?lat=' + center.lat.toString() + '&lng=' + center.lng.toString() )
       .then(res => res.json())
@@ -6,6 +10,12 @@ function updateMap(map, center){
         markers.forEach((marker)=>{
           marker.setMap(null)
         })
+
+        var icon = {
+          url: "https://raw.githubusercontent.com/micaelsbno/wot_app/82b885850482aaf9b72fc31df20c83860769ee31/app/assets/images/marker.svg",
+          anchor: new google.maps.Point(25,50),
+          scaledSize: new google.maps.Size(50,50)
+        }
 
         markers = []
         infoWindows = []
@@ -41,7 +51,7 @@ function updateMap(map, center){
             new google.maps.Marker({
             position: position,
             map: map,
-            icon: 'https://raw.githubusercontent.com/micaelsbno/outdoor_museum/master/app/assets/images/marker.png',
+            icon: icon,
             title: picture.event.name,
             place: picture.place.name
             })
