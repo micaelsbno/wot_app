@@ -1,0 +1,19 @@
+<div class="event__image" style="background-image: url(<%= @event.image_url %>">
+  <div class="event__image-container" style="justify-content: space-between;">
+    <h3 class="event__title"><%= @event.name %></h3>
+  </div>
+</div>
+
+<section class="event__main info-window__place-row">
+  <h4 class="event__place"><%= @place.name %></h4>
+  <h4 class="event__time"><%= @time[0].start_time.ctime %></h4>
+</section>
+
+<section class="event__description">
+  <p class="event__description"><%= @event.description%></p>
+</section>
+
+<section class="event__place">
+  <h2 class="event__place-name"><%= @event.place.name %></h2>
+  <p class="event__place-address">Address: <%= @event.place.street%>, <%= @event.place.city %>, <%= @event.place.country%></p>
+</section>

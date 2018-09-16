@@ -1,0 +1,45 @@
+<style>
+   /* Set the size of the div element that contains the map */
+  #map {
+    height: 85vh;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }
+</style>
+
+
+this is the events index
+<%= form_tag(sessions_path, :method => "delete",:class => 'logout_button') do %>
+  <%= submit_tag("Logout", :id =>"logout-button") %>
+<% end %>
+<div id="map"></div>
+<%= javascript_include_tag "map_styles.js" %>
+<%= javascript_include_tag "search.js" %>
+
+
+<script> 
+  function initMap() {
+    markers = []
+    infoWindows = []
+    contents = []
+    markerClusters = []
+    var uluru = {lat: -37.814, lng: 144.96332 }
+    var map = new google.maps.Map(
+        document.getElementById('map'), 
+        {
+          zoom: 17, 
+          center: uluru, 
+          styles: mapStyles,
+          gestureHandling: 'greedy'
+        })
+    updateMap(map, uluru)
+
+    map.addListener('dragend', function(e) {
+
+      var center = {lat: map.getCenter().lat(), lng: map.getCenter().lng()}
+      updateMap(map, center)
+    }) 
+  }
+
+</script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"> </script>
+<script>  <%= raw @google_map_loader %></script>
