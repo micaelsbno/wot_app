@@ -12,6 +12,8 @@ threads threads_count, threads_count
 port        ENV.fetch("PORT") { 3000 }
 
 # Specifies the `environment` that Puma will run in.
+
+
 #
 environment ENV.fetch("RAILS_ENV") { "development" }
 
@@ -32,3 +34,5 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
+
+bind "unix:/home/rails/marcon/shared/tmp/sockets/puma.sock" if ENV.fetch("RAILS_ENV") == 'production'
