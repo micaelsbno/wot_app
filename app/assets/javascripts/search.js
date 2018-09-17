@@ -12,7 +12,7 @@ function updateMap(map, center){
         })
 
         var icon = {
-          url: "https://cdn.rawgit.com/micaelsbno/wot_app/de29e5e9/app/assets/images/marker.svg",
+          url: "https://cdn.rawgit.com/micaelsbno/wot_app/017bf8aa/app/assets/images/marker.svg",
           anchor: new google.maps.Point(25,50),
           scaledSize: new google.maps.Size(30,30)
         }

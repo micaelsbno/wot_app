@@ -1,0 +1,30 @@
+.logo-image {
+  height: 20vh;
+}
+
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+}
+
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.main {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  margin: 20vh 10vh;
+}

@@ -6,16 +6,21 @@
    }
 </style>
 
+<header>
+  <div style="width: 50px;"></div>
+  <%= image_tag 'logo.png', :class => 'small-logo' %>
 
-this is the events index
-<%= form_tag(sessions_path, :method => "delete",:class => 'logout_button') do %>
-  <%= submit_tag("Logout", :id =>"logout-button") %>
-<% end %>
-<div id="map"></div>
+  <%= form_tag(sessions_path, :method => "delete",:class => 'logout_button') do %>
+    <%= submit_tag("Logout", :id =>"logout-button") %>
+  <% end %>
+
+
+  
+</header>
+  <div id="map"></div>
+
 <%= javascript_include_tag "map_styles.js" %>
 <%= javascript_include_tag "search.js" %>
-
-
 <script> 
   function initMap() {
     markers = []

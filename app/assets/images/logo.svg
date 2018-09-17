@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill="#D0021B" fill-rule="nonzero">
+            <path d="M12.4294132,0.17688552 C12.9342974,0.0611437328 13.4600083,0 14,0 C17.8659932,0 21,3.13400675 21,7 C21,7.53999172 20.9388563,8.06570256 20.8231145,8.57058683 C20.9392749,9.19601497 21,9.84091593 21,10.5 C21,16.2989899 16.2989899,21 10.5,21 C4.70101013,21 0,16.2989899 0,10.5 C0,4.70101013 4.70101013,0 10.5,0 C11.1590841,0 11.803985,0.0607250824 12.4294132,0.17688552 Z M12.4294132,0.17688552 C9.31965092,0.889780448 7,3.67399847 7,7 C7,10.8659932 10.1340068,14 14,14 C17.3260015,14 20.1102196,11.6803491 20.8231145,8.57058683 C20.0333909,4.31857694 16.6814231,0.966609073 12.4294132,0.17688552 Z" id="Combined-Shape"></path>
+            <circle id="Oval-Copy-2" cx="14.5" cy="6.5" r="6.5"></circle>
+        </g>
+    </g>
+</svg>
