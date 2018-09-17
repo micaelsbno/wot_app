@@ -19,8 +19,10 @@
 </header>
   <div id="map"></div>
 
+
 <%= javascript_include_tag "map_styles.js" %>
 <%= javascript_include_tag "search.js" %>
+
 <script> 
   function initMap() {
     markers = []
@@ -36,10 +38,10 @@
           styles: mapStyles,
           gestureHandling: 'greedy'
         })
+
     updateMap(map, uluru)
 
     map.addListener('dragend', function(e) {
-
       var center = {lat: map.getCenter().lat(), lng: map.getCenter().lng()}
       updateMap(map, center)
     }) 

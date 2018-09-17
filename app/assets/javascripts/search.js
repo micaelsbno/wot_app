@@ -4,9 +4,12 @@ function updateMap(map, center){
       .then(res => res.json())
       .then(response => {
 
-        markers.forEach((marker)=>{
-          marker.setMap(null)
-        })
+        markers.forEach( marker => marker.setMap(null) )
+
+        markers = []
+        infoWindows = []
+        contents = []
+        markerClusters = []
 
         var icon = {
           url: "https://cdn.rawgit.com/micaelsbno/wot_app/017bf8aa/app/assets/images/marker.svg",
@@ -14,14 +17,9 @@ function updateMap(map, center){
           scaledSize: new google.maps.Size(30,30)
         }
 
-        markers = []
-        infoWindows = []
-        contents = []
-        markerClusters = []
-
         response.forEach((picture, idx)=>{
 
-          var position = {lat: picture.place.latitude , lng: picture.place.longitude}
+          var position = {lat: parseFloat(picture.place.latitude) , lng: parseFloat(picture.place.longitude)}
 
           var time = new Date(picture.time.start_time)
           contents.push(
@@ -62,8 +60,9 @@ function updateMap(map, center){
         })
 
         markerClusters.push(
-          new MarkerClusterer(map, markers,{imagePath: 'https://raw.githubusercontent.com/micaelsbno/outdoor_museum/master/app/assets/images/clusterers/m'})
+          new MarkerClusterer(map, markers, {imagePath: 'https://raw.githubusercontent.com/micaelsbno/outdoor_museum/master/app/assets/images/clusterers/m'})
         )
+
       }
     )
 }
