@@ -1,6 +1,3 @@
-const icon = {
-
-}
 
 function updateMap(map, center){
     fetch('/update_events/?lat=' + center.lat.toString() + '&lng=' + center.lng.toString() )
