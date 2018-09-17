@@ -1,10 +1,10 @@
 
 function updateMap(map, center){
     fetch('/update_events/?lat=' + center.lat.toString() + '&lng=' + center.lng.toString() )
-      .then(res => res.json())
-      .then(response => {
+      .then(function(res){return res.json()})
+      .then(function(response){
 
-        markers.forEach( marker => marker.setMap(null) )
+        markers.forEach( function(marker){ marker.setMap(null)} )
 
         markers = []
         infoWindows = []
@@ -17,7 +17,7 @@ function updateMap(map, center){
           scaledSize: new google.maps.Size(30,30)
         }
 
-        response.forEach((picture, idx)=>{
+        response.forEach(function(picture, idx){
 
           var position = {lat: parseFloat(picture.place.latitude) , lng: parseFloat(picture.place.longitude)}
 
