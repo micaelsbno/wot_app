@@ -1,5 +1,3 @@
-require 'pry'
-
 class Database
   def self.add_user(info)
     if User.find_by(fb_id: info['id']) == nil
