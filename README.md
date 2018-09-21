@@ -1,24 +1,26 @@
-# README
+# We Out Here app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Event finder app based on user generated data, Facebook API and Google Maps API.
 
-* Ruby version
 
-* System dependencies
+##### Configuration
+Made with Ruby on Rails using Postgresql for database database.
 
-* Configuration
+##### Tech Used
 
-* Database creation
+Rails, Javascript, PostgreSQL, Facebook API, Google Maps.
 
-* Database initialization
+### How to use
 
-* How to run the test suite
+Not yet published version of the app so Facebook login is still not accessible. If you go to the [Events](https://weouthere.herokuapp.com/events "We Out Here Events") view it is possible to have a look on the current events in the database which were added for test purposes.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Extensions
 
-* Deployment instructions
-
-* ...
+* Add more API's for a larger event database.
+* Enable the user to add events from the app.
+* User search by genre.
+* Detect user's current geolocation.
+* Refactor data structure for less demanding database queries.
+* Unit testing
+* Many more...
